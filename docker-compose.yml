@@ -24,6 +24,15 @@ services:
     networks:
       - app-network
 
+  adminer:
+    image: adminer
+    container_name: wordpress_adminer
+    restart: always
+    ports:
+      - 8082:8080
+    networks:
+      - app-network
+
   wordpress:
     image: wordpress:latest
     container_name: wordpress
